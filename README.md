@@ -1,4 +1,4 @@
-""
+
 # Biological knowledge graph-guided investigation of immune therapy response in cancer with graph neural network
 
 This project implements the ICInet (DeepOmix-ICI) framework, a deep learning model that leverages biological knowledge graphs to predict immune therapy response in cancer patients. This framework is based on the research paper "Biological knowledge graph-guided investigation of immune therapy response in cancer with graph neural network".
