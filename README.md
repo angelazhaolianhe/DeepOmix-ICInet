@@ -22,20 +22,20 @@ The ICInet model aims to improve the prediction of immune checkpoint inhibitor (
 ```bash
 git clone https://github.com/angelazhaolianhe/DeepOmix-ICInet.git 
 cd DeepOmix-ICInet
-
-
 conda create -n icinet_env python=3.9 # Or Python 3.7 as per paper
 conda activate icinet_env
 python3 -m venv icinet_env
-source icinet_env/bin/activate # On Windows: .\icinet_env\Scripts\activate```
+source icinet_env/bin/activate 
+```
 
 
-### 3. Install Dependencies
+### 2. Install Dependencies
+
 
 Install the required Python packages using `pip`.
 
 ```bash
-pip install -r requirements.txt
+pip install 
 
 torch>=1.10.0
 torch_geometric>=2.0.0
@@ -45,3 +45,48 @@ scikit-learn>=1.0.0
 networkx>=2.6.0
 tqdm>=4.60.0
 matplotlib>=3.4.0
+
+```
+### 3. Prepare your datasets
+
+ICInet/
+└── data/
+    └── raw/
+        ├── gene_expression/
+        │   ├── Gide_expression.tsv
+        │   └── Kim_expression.tsv
+        ├── patient_response/
+        │   ├── Gide_response.tsv
+        │   └── Kim_response.tsv
+        └── networks/
+            ├── ici_target_genes.txt
+            ├── IntegratedGenePathway_network.csv
+            └── Nichenet_PPI.gml
+
+            
+### 4.Running the Project
+The main.py script orchestrates the entire pipeline: preprocessing, model training, and evaluation.
+
+1. Configure config.py
+Before running, open config.py and adjust parameters as needed:
+
+BASE_DIR: Ensure this path is correct if you move the config.py file. The current setup assumes it's at the project root or handles being in src/.
+
+
+ALL_COHORTS, TRAIN_COHORTS, TEST_COHORTS: Define which cohorts to use for your specific experiment (e.g., cross-cohort, intra-cohort).
+
+
+Hyperparameters: NUM_EPOCHS, BATCH_SIZE, LEARNING_RATE, model dimensions, etc.
+
+
+DEVICE: Set to 'cuda' if you have a compatible GPU and PyTorch is installed with CUDA support, otherwise 'cpu'.
+
+
+2. Run the Main Script
+
+
+Execute main.py from the project's root directory:
+```
+Generated bash
+python main.py
+```
