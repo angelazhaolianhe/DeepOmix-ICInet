@@ -70,7 +70,11 @@ ICInet/
 The main.py script orchestrates the entire pipeline: preprocessing, model training, and evaluation.
 
 1. Configure config.py
+
+
+
 Before running, open config.py and adjust parameters as needed:
+
 
 BASE_DIR: Ensure this path is correct if you move the config.py file. The current setup assumes it's at the project root or handles being in src/.
 
