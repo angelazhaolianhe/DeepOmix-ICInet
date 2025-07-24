@@ -22,3 +22,26 @@ The ICInet model aims to improve the prediction of immune checkpoint inhibitor (
 ```bash
 git clone https://github.com/angelazhaolianhe/DeepOmix-ICInet.git 
 cd DeepOmix-ICInet
+
+
+conda create -n icinet_env python=3.9 # Or Python 3.7 as per paper
+conda activate icinet_env
+python3 -m venv icinet_env
+source icinet_env/bin/activate # On Windows: .\icinet_env\Scripts\activate```
+
+
+### 3. Install Dependencies
+
+Install the required Python packages using `pip`.
+
+```bash
+pip install -r requirements.txt
+
+torch>=1.10.0
+torch_geometric>=2.0.0
+numpy>=1.20.0
+pandas>=1.3.0
+scikit-learn>=1.0.0
+networkx>=2.6.0
+tqdm>=4.60.0
+matplotlib>=3.4.0
