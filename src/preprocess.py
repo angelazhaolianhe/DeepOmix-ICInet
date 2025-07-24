@@ -272,8 +272,4 @@ if __name__ == "__main__":
         else:
             print(f"  Error: Saved file not found at {saved_file_path}")
 
-    # --- Clean up dummy directories and files ---
-    import shutil
-    if os.path.exists(base_data_dir):
-        shutil.rmtree(base_data_dir)
-        print(f"\nCleaned up dummy data directory: {base_data_dir}")
+ 
