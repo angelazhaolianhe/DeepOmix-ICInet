@@ -48,7 +48,7 @@ matplotlib>=3.4.0
 
 ```
 ### 3. Prepare your datasets
-
+```
 ICInet/
 └── data/
     └── raw/
@@ -63,7 +63,9 @@ ICInet/
             ├── IntegratedGenePathway_network.csv
             └── Nichenet_PPI.gml
 
-            
+   ```
+
+         
 ### 4.Running the Project
 The main.py script orchestrates the entire pipeline: preprocessing, model training, and evaluation.
 
